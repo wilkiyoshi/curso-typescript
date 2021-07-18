@@ -41,3 +41,7 @@ const u:undefined = undefined;
 const n:null = null;
 
 //object
+function criar(objecto:object){
+    //
+}
+criar ({propriedade:1})
