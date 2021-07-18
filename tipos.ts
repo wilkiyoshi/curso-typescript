@@ -59,4 +59,40 @@ function falha(){
     return erro('algo falhou')
 }
 
-//
+//union types
+function nota(nota1:number | string | boolean){
+    console.log(`A nota é ${nota1}`);	    
+}
+
+nota('10');
+nota(false);
+nota(2);
+
+//alias
+type Funcionarios = Array<string>;
+
+type Funcionarios2 = {
+    nome:string,
+    sobrenome:string,
+    idade:number
+}
+
+const funcionario:Funcionarios = ["Ciclano","Fulano","Jão"];
+
+const funcionarios2:Funcionarios2[] = [{nome:"Nome",sobrenome:"Sobrenome",idade:23}];
+
+//valores nulos ou opcionais (?)
+let altura:number|null = 1.6;
+altura=null;
+
+type contato ={
+    nome:string,
+    telefone1:string,
+    telefone2?:string
+}
+
+const contato1:contato ={
+    nome:"Will",
+    telefone1:"11111111",
+    telefone2:""
+}
