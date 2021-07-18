@@ -96,3 +96,11 @@ const contato1:contato ={
     telefone1:"11111111",
     telefone2:""
 }
+
+//type assertion (tipo CAST)
+const minhaIdade: any=23;
+(minhaIdade as number).toString();
+console.log(minhaIdade);
+
+const input = <HTMLInputElement>document.getElementById("number2");
+console.log(input.value);
