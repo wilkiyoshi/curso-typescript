@@ -17,3 +17,57 @@ const data2 = new Data (1,1);//se declarar no constructor o typescript entender√
 
 
 
+class Carro{
+    private velocidadeAtual:number=0;
+
+    constructor(
+    public marca:string,
+    public modelo:string,
+    private velocidadeMaxima:number=220,
+    
+    ){}
+
+    private alterarVelocidade(delta: number){
+        const novaVelocidade = this.velocidadeAtual + delta;
+
+        if (novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima){
+            this.velocidadeAtual = novaVelocidade;
+        }else{
+            this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0
+        }
+        
+    }
+
+    acelerar(){
+        this.alterarVelocidade (5);
+        }
+
+    frear(){
+        this.alterarVelocidade(-5);
+    }
+
+    }
+
+
+
+const carro = new Carro ("GM","Prisma", 120);
+
+carro.acelerar();
+
+//heran√ßa
+
+class Camaro extends Carro{
+    private turbo = false;
+    constructor(){
+        super("GM","Camaro",250);
+    }
+    ligarTurbo(){
+        this.turbo=true;
+    }
+}
+
+const camaro = new Camaro();
+camaro.acelerar();
+camaro.frear();
+
+
