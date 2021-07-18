@@ -48,4 +48,26 @@ function erro(mensagem) {
 function falha() {
     return erro('algo falhou');
 }
-//
+//union types
+function nota(nota1) {
+    console.log("A nota \u00E9 " + nota1);
+}
+nota('10');
+nota(false);
+nota(2);
+var funcionario = ["Ciclano", "Fulano", "Jão"];
+var funcionarios2 = [{ nome: "Nome", sobrenome: "Sobrenome", idade: 23 }];
+//valores nulos ou opcionais (?)
+var altura = 1.6;
+altura = null;
+var contato1 = {
+    nome: "Will",
+    telefone1: "11111111",
+    telefone2: ""
+};
+//type assertion (tipo CAST)
+var minhaIdade = 23;
+minhaIdade.toString();
+console.log(minhaIdade);
+var input = document.getElementById("number2");
+console.log(input.value);
