@@ -33,3 +33,19 @@ function printar(mensagem) {
 var u = undefined;
 var n = null;
 //object
+function criar(objecto) {
+    //
+}
+criar({ propriedade: 1 });
+//never
+function nuncaOcorre() {
+    while (true)
+        ;
+}
+function erro(mensagem) {
+    throw new Error(mensagem);
+}
+function falha() {
+    return erro('algo falhou');
+}
+//
