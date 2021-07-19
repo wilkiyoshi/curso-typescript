@@ -20,6 +20,7 @@ jogadores = ["Will","JOão","Ciclano"];
 let jogadores2:[string,boolean,number];
 jogadores2 = ["Will", false,2];
 
+
 //enum
 enum StatusAprovado{
     Aprovado="01",
@@ -102,5 +103,8 @@ const minhaIdade: any=23;
 (minhaIdade as number).toString();
 console.log(minhaIdade);
 
+
 const input = <HTMLInputElement>document.getElementById("number2");
 console.log(input.value);
+
+
